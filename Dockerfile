@@ -1,4 +1,4 @@
-FROM langgenius/dify-api:0.15.3
+FROM langgenius/dify-api:1.1.3
 
 WORKDIR /app/api
 
