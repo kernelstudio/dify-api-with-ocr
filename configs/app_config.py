@@ -50,7 +50,7 @@ class RemoteSettingsSourceFactory(PydanticBaseSettingsSource):
 
 
 class DifyConfig(
-    # ocr info
+    # 添加ocr配置
     OcrConfig,
     # Packaging info
     PackagingInfo,

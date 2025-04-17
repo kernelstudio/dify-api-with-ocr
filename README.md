@@ -4,7 +4,7 @@ Dify工作流编码中的文档提取器默认不支持提取扫描版PDF文件,
 并修改Dify相关源码.
 
 ```text
-注意: 此次修改在 Dify 0.15.3版本上测试通过.
+注意: 此次修改在 Dify 1.1.3 版本上测试通过, 0.15.3版本请查看0.15.3分支.
 ```
 
 ## 1. 添加OCR配置
@@ -26,7 +26,7 @@ class DifyConfig(
 
 ## 2. 修改文档提取器相关代码
 
-添加以下ocr服务调用方法, [具体查看](./core/workflow/nodes/document_extractor/node.py#L188)
+添加以下ocr服务调用方法, [具体查看](./core/workflow/nodes/document_extractor/node.py#L196)
 
 ```python
 import requests
@@ -51,7 +51,7 @@ def _ocr_extract_pdf(file_content: bytes) -> str:
     return None
 ```
 
-找到 `_extract_text_from_pdf` [方法](./core/workflow/nodes/document_extractor/node.py#L206)修改为如下代码:
+找到 `_extract_text_from_pdf` [方法](./core/workflow/nodes/document_extractor/node.py#L214)修改为如下代码:
 
 ```python
 def _extract_text_from_pdf(file_content: bytes) -> str:
@@ -97,7 +97,7 @@ x-shared-env: &shared-api-worker-env
   OCR_SERVICE_URL: ${OCR_SERVICE_URL:-}
 ```
 
-将此文件中的 `image: langgenius/dify-api:0.15.3` 修改为定制后的镜像名称 `image: langgenius/dify-api-with-ocr:0.15.3`
+将此文件中的 `image: langgenius/dify-api:1.1.3` 修改为定制后的镜像名称 `image: langgenius/dify-api-with-ocr:1.1.3`
 
 ## 5. 制作镜像
 
