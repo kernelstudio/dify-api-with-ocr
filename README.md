@@ -101,7 +101,7 @@ x-shared-env: &shared-api-worker-env
   OCR_SERVICE_URL: ${OCR_SERVICE_URL:-}
 ```
 
-将此文件中的 `image: langgenius/dify-api:1.1.3` 修改为定制后的镜像名称 `image: langgenius/dify-api-with-ocr:1.1.3`
+将此文件中的 `image: langgenius/dify-api:1.3.1` 修改为定制后的镜像名称 `image: langgenius/dify-api-with-ocr:1.3.1`
 
 ## 5. 制作镜像
 
