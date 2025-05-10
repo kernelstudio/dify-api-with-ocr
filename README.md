@@ -4,8 +4,12 @@ Dify工作流编码中的文档提取器默认不支持提取扫描版PDF文件,
 并修改Dify相关源码.
 
 ```text
-注意: 此次修改在 Dify 0.15.3版本上测试通过.
+注意: 暂时只支持如下版本
 ```
+
+* [1.3.1](https://gitee.com/kernelstudio/dify-api-with-ocr)
+* [1.1.3](https://gitee.com/kernelstudio/dify-api-with-ocr/tree/1.1.3/)
+* [0.15.3](https://gitee.com/kernelstudio/dify-api-with-ocr/tree/0.15.3/)
 
 ## 1. 添加OCR配置
 
